@@ -1,6 +1,6 @@
 window.DINORUN_SITE_CONFIG = {
-  // Paste the live Creem product checkout URL here after merchant approval.
-  checkoutUrl: "",
+  // PayPal payment link for the US$70 Dinorun license.
+  checkoutUrl: "https://www.paypal.com/ncp/payment/QBFSNNFBZ8YJJ",
 
   // Must match the support email in Creem Business Details and receipts.
   supportEmail: "leehonxuan@gmail.com"

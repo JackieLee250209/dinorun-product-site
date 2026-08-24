@@ -10,13 +10,12 @@ Edit `site-config.js`:
 
 ```js
 window.DINORUN_SITE_CONFIG = {
-  checkoutUrl: "https://your-creem-checkout-url",
+  checkoutUrl: "https://www.paypal.com/ncp/payment/QBFSNNFBZ8YJJ",
   supportEmail: "leehonxuan@gmail.com"
 };
 ```
 
-Until `checkoutUrl` is set, purchase buttons show a localized message instead
-of sending customers to a broken link.
+The purchase buttons open the configured PayPal payment page in a new tab.
 
 The support email must match **Settings > Business Details** in Creem and the
 email printed on Creem receipts.
