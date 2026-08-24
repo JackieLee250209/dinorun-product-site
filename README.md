@@ -42,6 +42,20 @@ Then open `http://localhost:4173/`.
 No custom domain is required. A `CNAME` file can be added later when a domain
 has been selected.
 
+## Payment return page
+
+Use the following public URL as the successful-payment return URL in PayPal or
+another checkout provider:
+
+```text
+https://jackielee250209.github.io/dinorun-product-site/purchase-complete.html
+```
+
+The page explains the download, installation and manual offline-activation
+steps in English and Simplified Chinese. Reaching a return URL is not proof of
+payment, so verify the completed order in the payment provider before issuing
+a license.
+
 ## Public-content boundary
 
 - The displayed interface captures come from the bilingual Qt preview.
