@@ -11,12 +11,15 @@ Edit `site-config.js`:
 ```js
 window.DINORUN_SITE_CONFIG = {
   checkoutUrl: "https://your-creem-checkout-url",
-  supportEmail: "support@example.com"
+  supportEmail: "leehonxuan@gmail.com"
 };
 ```
 
 Until `checkoutUrl` is set, purchase buttons show a localized message instead
 of sending customers to a broken link.
+
+The support email must match **Settings > Business Details** in Creem and the
+email printed on Creem receipts.
 
 ## Preview locally
 
