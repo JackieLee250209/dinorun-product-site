@@ -17,8 +17,8 @@ window.DINORUN_SITE_CONFIG = {
 
 The purchase buttons open the configured PayPal payment page in a new tab.
 
-The support email must match **Settings > Business Details** in Creem and the
-email printed on Creem receipts.
+Keep the support email consistent across the website, payment receipts and
+support replies.
 
 ## Preview locally
 
@@ -59,6 +59,8 @@ a license.
 
 - The displayed interface captures come from the bilingual Qt preview.
 - DINOHB is consistently described as experimental.
-- The site states that ROMs and copyrighted game data are not included.
+- The site states that Dinorun is independent software, does not include or
+  distribute ROMs or third-party game data, and is not affiliated with game
+  copyright holders.
 - Do not add ROMs, customer licenses, activation requests, private keys,
   firmware keys, logs or user configuration to this repository.
