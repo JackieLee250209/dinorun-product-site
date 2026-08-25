@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact Dinorun support about orders, activation and software questions.">
+  <title>Support | Dinorun</title>
+  <link rel="icon" href="assets/images/dinorun.ico">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site-config.js" defer></script>
+  <script src="legal.js" defer></script>
+  <script src="support.js" defer></script>
+</head>
+<body data-title-en="Support" data-title-zh="客户支持">
+  <a class="skip-link" href="#main">
+    <span data-copy-lang="en">Skip to content</span>
+    <span data-copy-lang="zh" hidden>跳到正文</span>
+  </a>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Dinorun home">
+      <img src="assets/images/gamepad.png" alt="" width="42" height="42">
+      <span>DINORUN</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Support navigation">
+      <a href="index.html#features"><span data-copy-lang="en">Features</span><span data-copy-lang="zh" hidden>功能</span></a>
+      <a href="index.html#faq"><span data-copy-lang="en">FAQ</span><span data-copy-lang="zh" hidden>常见问题</span></a>
+    </nav>
+    <div class="header-actions">
+      <button class="lang-toggle" type="button" aria-label="Switch language"><span data-lang-label>中文</span></button>
+      <a class="button button-small" href="index.html"><span data-copy-lang="en">Home</span><span data-copy-lang="zh" hidden>主页</span></a>
+    </div>
+  </header>
+
+  <main class="support-main" id="main">
+    <section class="support-hero">
+      <div data-copy-lang="en">
+        <p class="eyebrow">CUSTOMER SUPPORT</p>
+        <h1>How can we help?</h1>
+        <p>Send a support request about your order, activation or Dinorun software. We normally reply within three business days.</p>
+      </div>
+      <div data-copy-lang="zh" hidden>
+        <p class="eyebrow">客户支持</p>
+        <h1>需要什么帮助？</h1>
+        <p>你可以提交订单、激活或 Dinorun 软件相关的问题。我们通常会在三个工作日内回复。</p>
+      </div>
+    </section>
+
+    <section class="support-content">
+      <div class="support-form-panel">
+        <div data-copy-lang="en">
+          <h2>Send a message</h2>
+          <p class="support-intro">Submitting this form opens your email application with the message prepared. Check the recipient and click Send in your email application.</p>
+        </div>
+        <div data-copy-lang="zh" hidden>
+          <h2>提交留言</h2>
+          <p class="support-intro">提交后会打开你的邮件应用并自动填写留言。请在邮件应用中确认收件人，然后点击发送。</p>
+        </div>
+
+        <form class="support-form" data-support-form>
+          <label><span data-copy-lang="en">Your name</span><span data-copy-lang="zh" hidden>你的称呼</span><input name="name" type="text" autocomplete="name" required></label>
+          <label><span data-copy-lang="en">Email address</span><span data-copy-lang="zh" hidden>邮箱地址</span><input name="email" type="email" autocomplete="email" required></label>
+          <label><span data-copy-lang="en">Topic</span><span data-copy-lang="zh" hidden>问题类型</span>
+            <select name="topic">
+              <option value="General question" data-topic-en="General question" data-topic-zh="一般问题">General question</option>
+              <option value="Order question" data-topic-en="Order question" data-topic-zh="订单问题">Order question</option>
+              <option value="Activation request" data-topic-en="Activation request" data-topic-zh="激活申请">Activation request</option>
+              <option value="Installation or runtime issue" data-topic-en="Installation or runtime issue" data-topic-zh="安装或运行问题">Installation or runtime issue</option>
+              <option value="Controller compatibility" data-topic-en="Controller compatibility" data-topic-zh="手柄兼容性">Controller compatibility</option>
+            </select>
+          </label>
+          <label><span data-copy-lang="en">Order number (optional)</span><span data-copy-lang="zh" hidden>订单号（可选）</span><input name="order" type="text" autocomplete="off"></label>
+          <label class="support-message-field"><span data-copy-lang="en">Message</span><span data-copy-lang="zh" hidden>留言内容</span><textarea name="message" rows="8" required></textarea></label>
+          <p class="support-safety"><span data-copy-lang="en">Do not include passwords, full payment-card details, ROM files or private keys.</span><span data-copy-lang="zh" hidden>请勿填写密码、完整银行卡信息、ROM 文件或私钥。</span></p>
+          <button class="button" type="submit"><span data-copy-lang="en">Open email draft</span><span data-copy-lang="zh" hidden>打开邮件草稿</span></button>
+          <p class="support-submit-note" data-support-status aria-live="polite"></p>
+        </form>
+      </div>
+
+      <aside class="support-aside">
+        <div data-copy-lang="en"><p class="eyebrow">DIRECT CONTACT</p><h2>Email support</h2><p>If your email application does not open, contact us directly:</p><a class="support-email" data-support-email href="mailto:leehonxuan@gmail.com">leehonxuan@gmail.com</a><p class="support-aside-note">For activation, include the machine-generated request code and your order number. Do not send ROMs or payment-card details.</p></div>
+        <div data-copy-lang="zh" hidden><p class="eyebrow">直接联系</p><h2>邮件支持</h2><p>如果邮件应用没有打开，请直接发送邮件至：</p><a class="support-email" data-support-email href="mailto:leehonxuan@gmail.com">leehonxuan@gmail.com</a><p class="support-aside-note">申请激活时，请附上电脑生成的申请码和订单号。请勿发送 ROM 或银行卡信息。</p></div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand"><img src="assets/images/gamepad.png" alt="" width="38" height="38"><strong>DINORUN</strong></div>
+    <p><span data-copy-lang="en">Dinorun is emulator software only. ROMs are not included.</span><span data-copy-lang="zh" hidden>Dinorun 仅为模拟器软件，不包含 ROM。</span></p>
+    <div class="footer-links"><a href="support.html"><span data-copy-lang="en">Support</span><span data-copy-lang="zh" hidden>客服支持</span></a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="refunds.html">Refunds</a><button class="lang-toggle footer-lang" type="button" data-lang-label>中文</button></div>
+    <p class="copyright">© <span data-year></span> Dinorun.</p>
+  </footer>
+</body>
+</html>
