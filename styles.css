@@ -245,6 +245,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .support-aside .eyebrow { margin-bottom: 12px; }
 .support-aside > div > p:not(.eyebrow) { color: var(--muted); }
 .support-email { display: inline-block; margin: 8px 0 12px; color: var(--green); font-size: 18px; font-weight: 800; overflow-wrap: anywhere; }
+.support-email + .support-email { margin-left: 14px; }
 .support-aside-note { padding-top: 18px; border-top: 1px solid var(--line); font-size: 13px; }
 
 .checkout-dialog { width: min(440px, calc(100vw - 36px)); padding: 34px; border: 0; border-radius: 8px; color: var(--ink); box-shadow: var(--shadow); text-align: center; }
@@ -341,6 +342,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .support-form { grid-template-columns: 1fr; }
   .support-message-field, .support-safety, .support-form > .button, .support-submit-note { grid-column: auto; }
   .support-aside { margin-top: 54px; padding: 24px 20px; border-left: 0; border-top: 1px solid var(--line); }
+  .support-email + .support-email { margin-left: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {

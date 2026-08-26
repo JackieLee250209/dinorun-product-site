@@ -64,11 +64,14 @@ document.querySelectorAll(".buy-link").forEach((link) => {
   }
 });
 
-if (config.supportEmail) {
-  const supportLink = document.querySelector(".support-link");
-  supportLink.href = `mailto:${config.supportEmail}`;
-  supportLink.textContent = config.supportEmail;
-}
+const supportEmails = Array.isArray(config.supportEmails) ? config.supportEmails : ["38784757@qq.com", "leehonxuan@gmail.com"];
+document.querySelectorAll("[data-support-email-index]").forEach((link) => {
+  const email = supportEmails[Number(link.dataset.supportEmailIndex)];
+  if (email) {
+    link.href = `mailto:${email}`;
+    link.textContent = email;
+  }
+});
 
 document.querySelector(".dialog-close").addEventListener("click", () => dialog.close());
 document.querySelector(".dialog-ok").addEventListener("click", () => dialog.close());

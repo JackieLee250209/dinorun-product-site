@@ -11,13 +11,13 @@ Edit `site-config.js`:
 ```js
 window.DINORUN_SITE_CONFIG = {
   checkoutUrl: "https://www.paypal.com/ncp/payment/QBFSNNFBZ8YJJ",
-  supportEmail: "leehonxuan@gmail.com"
+  supportEmails: ["38784757@qq.com", "leehonxuan@gmail.com"]
 };
 ```
 
 The purchase buttons open the configured PayPal payment page in a new tab.
 
-Keep the support email consistent across the website, payment receipts and
+Keep both support emails consistent across the website, payment receipts and
 support replies.
 
 ## Preview locally

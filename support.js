@@ -1,4 +1,7 @@
 const supportConfig = window.DINORUN_SITE_CONFIG || {};
+const supportEmails = Array.isArray(supportConfig.supportEmails) && supportConfig.supportEmails.length
+  ? supportConfig.supportEmails
+  : ["38784757@qq.com", "leehonxuan@gmail.com"];
 const supportForm = document.querySelector("[data-support-form]");
 const supportStatus = document.querySelector("[data-support-status]");
 
@@ -17,17 +20,18 @@ document.querySelectorAll(".lang-toggle").forEach((button) => {
   button.addEventListener("click", () => window.setTimeout(updateTopicLabels, 0));
 });
 
-document.querySelectorAll("[data-support-email]").forEach((link) => {
-  if (supportConfig.supportEmail) {
-    link.href = `mailto:${supportConfig.supportEmail}`;
-    link.textContent = supportConfig.supportEmail;
+document.querySelectorAll("[data-support-email-index]").forEach((link) => {
+  const email = supportEmails[Number(link.dataset.supportEmailIndex)];
+  if (email) {
+    link.href = `mailto:${email}`;
+    link.textContent = email;
   }
 });
 
 supportForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const data = new FormData(supportForm);
-  const recipient = supportConfig.supportEmail || "leehonxuan@gmail.com";
+  const recipient = supportEmails.join(",");
   const language = currentSupportLanguage();
   const subjectPrefix = language === "zh" ? "Dinorun 客户支持" : "Dinorun support request";
   const subject = `${subjectPrefix}: ${data.get("topic")}`;
