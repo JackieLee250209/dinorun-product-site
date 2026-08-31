@@ -51,28 +51,7 @@ document.querySelectorAll(".lang-toggle").forEach((button) => {
 });
 
 document.querySelectorAll(".buy-link").forEach((link) => {
-  if (config.paymentApiUrl) {
-    link.addEventListener("click", async (event) => {
-      event.preventDefault();
-      if (link.dataset.checkoutBusy === "true") return;
-      link.dataset.checkoutBusy = "true";
-      link.setAttribute("aria-busy", "true");
-      try {
-        const response = await fetch(`${config.paymentApiUrl}/api/create-order`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" }
-        });
-        const result = await response.json();
-        if (!response.ok || !result.approveUrl) throw new Error(result.error || "Unable to start checkout");
-        window.location.assign(result.approveUrl);
-      } catch (error) {
-        console.error(error);
-        alert(language === "zh" ? "暂时无法创建 PayPal 订单，请稍后重试或联系支持。" : "Unable to start the PayPal order. Please try again later or contact support.");
-        link.dataset.checkoutBusy = "false";
-        link.removeAttribute("aria-busy");
-      }
-    });
-  } else if (config.checkoutUrl) {
+  if (config.checkoutUrl) {
     link.href = config.checkoutUrl;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
