@@ -1,8 +1,9 @@
 # Dinorun product site
 
-Static bilingual product homepage for GitHub Pages. The site has no build step
-and does not contain ROMs, installers, license files, customer data or private
-keys.
+Static bilingual product homepage for GitHub Pages. The current product release
+is Dinorun 1.0.2, adding the Punipic profile alongside DINOPIC2 and the
+experimental DINOHB profile. The site has no build step and does not contain
+game ROMs, installers, license files, customer data or private keys.
 
 ## Configure checkout and support
 
@@ -10,12 +11,12 @@ Edit `site-config.js`:
 
 ```js
 window.DINORUN_SITE_CONFIG = {
-  checkoutUrl: "https://www.paypal.com/ncp/payment/QBFSNNFBZ8YJJ",
+  checkoutUrl: "https://www.creem.io/payment/prod_2ZXC9d6AuM8RCzxtco9Riq",
   supportEmails: ["38784757@qq.com", "leehonxuan@gmail.com"]
 };
 ```
 
-The purchase buttons open the configured PayPal payment page in a new tab.
+The purchase buttons open the configured Creem checkout page in a new tab.
 
 Keep both support emails consistent across the website, payment receipts and
 support replies.
@@ -43,11 +44,11 @@ has been selected.
 
 ## Payment return page
 
-Use the following public URL as the successful-payment return URL in PayPal or
-another checkout provider:
+Use the following public URL as the successful-payment return URL when your
+checkout provider supports a customer return page:
 
 ```text
-https://jackielee250209.github.io/dinorun-product-site/purchase-complete.html
+https://dinorunemu.shop/purchase-complete.html
 ```
 
 The page explains the download, installation and manual offline-activation
@@ -58,6 +59,7 @@ a license.
 ## Public-content boundary
 
 - The displayed interface captures come from the bilingual Qt preview.
+- Dinorun 1.0.2 supports DINOPIC2 and Punipic; DINOHB remains experimental.
 - DINOHB is consistently described as experimental.
 - The site states that Dinorun is independent software, does not include or
   distribute ROMs or third-party game data, and is not affiliated with game
