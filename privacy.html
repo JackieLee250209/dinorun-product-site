@@ -29,7 +29,8 @@
         <ul>
           <li><strong>Order information:</strong> name, email address, country, product, order number and payment status supplied by the payment provider shown at checkout. We do not receive your full card number.</li>
           <li><strong>Activation information:</strong> the machine request code, machine fingerprint information contained in that request, license ID and activation status needed to issue and support a single-machine license.</li>
-          <li><strong>Online authorization information:</strong> license ID, TPM public-key digest, hashed machine factors, game entitlements, challenge and lease timing, and ordinary security logs. The authorization service does not receive raw Windows MachineGuid, SMBIOS UUID or disk serial values.</li>
+          <li><strong>Online authorization request information:</strong> signed license data, license ID, TPM public key and its digest, hashed current machine factors and their aggregate machine digest, game entitlements, challenge identifier and TPM proof. The service creates challenge and lease timing data. It does not receive raw Windows MachineGuid, SMBIOS UUID or disk serial values.</li>
+          <li><strong>Online authorization records:</strong> the license-service database stores the license ID, TPM public-key digest, aggregate machine digest, activation status, and activation and update timestamps. Challenge records contain a challenge identifier and value, the same digests, and an expiration time. The TPM public key and proof are processed for verification but are not stored in the license-service database.</li>
           <li><strong>Support information:</strong> messages, diagnostic details and files that you voluntarily send when requesting help.</li>
           <li><strong>Website and service delivery data:</strong> Cloudflare may process ordinary server logs such as IP address, browser type and request time to deliver and secure the website and authorization service.</li>
         </ul>
@@ -58,7 +59,8 @@
         <ul>
           <li><strong>订单信息：</strong>由记录商户服务商提供的姓名、邮箱、国家或地区、产品、订单号和付款状态。我们不会收到完整银行卡号。</li>
           <li><strong>激活信息：</strong>签发和支持单机许可证所需的机器申请码、其中包含的机器指纹信息、许可证编号和激活状态。</li>
-          <li><strong>联机授权信息：</strong>许可证编号、TPM 公钥摘要、机器因素哈希、授权游戏、挑战和租约时间，以及普通安全日志。授权服务不会接收原始 Windows MachineGuid、SMBIOS UUID 或磁盘序列号。</li>
+          <li><strong>联机授权请求信息：</strong>已签名许可证数据、许可证编号、TPM 公钥及其摘要、当前机器因素哈希及其汇总机器摘要、授权游戏、挑战编号和 TPM 证明。服务会生成挑战及租约时间数据。授权服务不会接收原始 Windows MachineGuid、SMBIOS UUID 或磁盘序列号。</li>
+          <li><strong>联机授权记录：</strong>许可服务数据库保存许可证编号、TPM 公钥摘要、汇总机器摘要、激活状态，以及激活和更新时间。挑战记录包含挑战编号与随机值、相同摘要和过期时间。TPM 公钥和证明仅用于核验，不保存在许可服务数据库中。</li>
           <li><strong>支持信息：</strong>用户寻求帮助时自愿发送的消息、诊断信息和文件。</li>
           <li><strong>网站与服务访问数据：</strong>Cloudflare 为交付和保护网站及授权服务，可能处理 IP 地址、浏览器类型和请求时间等普通服务器日志。</li>
         </ul>
